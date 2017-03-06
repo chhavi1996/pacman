@@ -93,7 +93,6 @@ function setup() {
 }
 
 function draw() {
-
 	
 	background(5);
 	if(flag)
@@ -173,6 +172,7 @@ function draw() {
    			document.getElementById('over').style.backgroundColor = "rgba(200,200,200,0.4)";
    			document.getElementById('congrats').style.display = "block";
 
+
 			noLoop();
    		}
 
@@ -186,6 +186,7 @@ function draw() {
    				count--;
    				score+=10;
    				document.getElementById('score').innerHTML = "Score :"+score;
+
    			}
    			
 
@@ -201,6 +202,7 @@ function draw() {
    				count--;
  				score+=10;
    				document.getElementById('score').innerHTML = "Score :"+score;
+
    			}   			
    		}
    		else if(direction == 3 && !current.walls[2]){
@@ -215,6 +217,7 @@ function draw() {
    				count--;
    				score+=10;
    				document.getElementById('score').innerHTML = "Score :"+score;
+
    			}   			
    		}
    		else if(direction == 4 && !current.walls[3]){
@@ -228,6 +231,7 @@ function draw() {
    				count--;
    				score+=10;
    				document.getElementById('score').innerHTML = "Score :"+score;
+
    			}   			
    		}
 
@@ -295,7 +299,7 @@ function Ghosts(img,x,y)
 				c--;
 	   			if(c==0){
 					// text("Game Over", 100,100,150,100);
-					document.getElementById('gamePop').className = "final";
+			document.getElementById('gamePop').className = "final";
    			document.getElementById('over').style.backgroundColor = "rgba(200,200,200,0.4)";
 
 					document.getElementById('gameOver').style.display = "block";
@@ -311,13 +315,14 @@ function Ghosts(img,x,y)
 					
 					heroDead.play();
 					mySound.stop();
+
 					for(var i=0;i<devil.length;i++)
 					{
 						devil[i].i=devil[i].lastx;
 						devil[i].j=devil[i].lasty;
 
 					}
-					
+
 					flag=true;
 					
 				}
@@ -335,7 +340,7 @@ function Ghosts(img,x,y)
 		var chase=grid[index(this.i,this.j)];
 		var dx=xball-this.i;
 		var dy=yball-this.j;
-		console.log(chase);
+
 
 	if(!this.isRandom && this.img===redImg)
 	{
@@ -558,8 +563,6 @@ function makePower(x,y)
 
 			this.draw=false;
 			current.draw=false;
-			// sleep(1000);
-			// mySound.play();
 
 			setTimeout(makeGhostStrong,10000);
 
