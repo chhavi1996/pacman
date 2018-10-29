@@ -10,9 +10,8 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <% ResultSet rs =(ResultSet)request.getAttribute("resultset"); %>
 
-<div class="header">
-    Pac Man
- </div>   
+<div class="header">Pac Man</div> 
+	
 <div id="Table">
     <TABLE BORDER="1">
             <TR>
