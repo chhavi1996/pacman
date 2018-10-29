@@ -29,11 +29,11 @@ function pacman(x,y) {
 	   	this.x=0;
 
 	   if(this.y>height-w)
-	   		this.y=height-w;
+	   	this.y=height-w;
 
 
-	   	if(this.y<0)
-	   		this.y=0;
+	   if(this.y<0)
+	   	this.y=0;
 		
 	}
 }
